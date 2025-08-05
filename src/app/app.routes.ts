@@ -8,7 +8,7 @@ import { FormPacienteComponent } from './features/pacientes/form-paciente/form-p
 import { FormMedicoComponent } from './features/medicos/form-medico/form-medico.component';
 
 export const routes: Routes = [
-  { path: '',redirectTo: 'citas',pathMatch: 'full' },
+  { path: '', redirectTo: 'citas', pathMatch: 'full' },
   { path: 'citas', component: ListCitasComponent },
   { path: 'pacientes', component: ListPacientesComponent },
   { path: 'medicos', component: ListMedicosComponent },

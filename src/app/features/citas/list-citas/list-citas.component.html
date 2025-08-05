@@ -6,7 +6,34 @@
     </button>
   </div>
 
-  <div class="grid gap-4">
+  <div class="overflow-x-auto shadow rounded-lg border border-gray-200">
+    <table  class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Id Médico</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre Médico</th>
+          <th scope="col" class="px-8 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha Cita</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Motivo Cita</th>
+          <th scope="col" class="px-6 py-3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for ( cita of citas(); track cita.id){
+          <tr>
+            <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.medicoId }}</td>
+            <td class="px-6 py-4 text-sm text-gray-900"> {{ getNombreMedico(cita.medicoId) }}</td>
+            <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.fecha }}</td>
+            <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.motivo }}</td>
+          </tr>
+        }
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+  <!-- <div class="grid gap-4">
     @for (cita of citas(); track cita.id) {
 
     <div  class="bg-white rounded-lg shadow p-4 border border-gray-200">
@@ -24,5 +51,8 @@
 
     }
 
-  </div>
+  </div> -->
+
+
+  
 </section>

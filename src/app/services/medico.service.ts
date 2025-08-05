@@ -20,12 +20,12 @@ export class MedicoService {
     return this.http.get<Medico>(`${this.baseUrl}/${id}`);
   }
 
-  crearMedico(cita: Medico): Observable<Medico> {
-    return this.http.post<Medico>(this.baseUrl, cita);
+  crearMedico(medico: Medico): Observable<Medico> {
+    return this.http.post<Medico>(this.baseUrl, medico);
   }
 
-  actualizarMedico(cita: Medico): Observable<Medico> {
-    return this.http.put<Medico>(`${this.baseUrl}/${cita.id}`, cita);
+  actualizarMedico(medico: Medico): Observable<Medico> {
+    return this.http.put<Medico>(`${this.baseUrl}/${medico.id}`, medico);
   }
 
   eliminarMedico(id: string): Observable<void> {

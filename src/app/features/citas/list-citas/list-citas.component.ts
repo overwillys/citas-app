@@ -3,6 +3,8 @@ import { Cita } from '../../../models/cita.model';
 import { CitaService } from '../../../services/cita.service';
 import { RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Medico } from '../../../models/medico.model';
+import { MedicoService } from '../../../services/medico.service';
 
 
 @Component({
@@ -12,14 +14,19 @@ import Swal from 'sweetalert2';
   styleUrl: './list-citas.component.css'
 })
 export class ListCitasComponent implements OnInit {
-  citas = signal<Cita[]>([]);
+  citas  = signal<Cita[]>([]);
+  medicos = signal<Medico[]>([]);
 
-  constructor(private citaService: CitaService) {}
+  constructor(private citaService: CitaService, private medicoService: MedicoService) {}
 
   ngOnInit(): void {
     this.citaService.getCitas().subscribe((data) => {
       this.citas.set(data);
     });
+
+    this.medicoService.getMedicos().subscribe((data) =>{
+      this.medicos.set(data);
+    })
   }
 
   eliminarCita(id: string): void {
@@ -43,4 +50,16 @@ export class ListCitasComponent implements OnInit {
     }
   });
 }
+
+
+// obtniendo el nommbre del medico para la cita :
+
+getNombreMedico( medicoId: string ){
+  // llamo al signal de medico, busca dentro del array de "m",  dentro cuyo "id" sea igual al paràmetro ( medicoId) 
+  // Si find encuentra mostramos el nombre, sino , mostramos "--"
+  return this.medicos().find(m=> m.id === medicoId)?.nombre ?? ' No tiene medico asignado.-';
 }
+
+}
+
+

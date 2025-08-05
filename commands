@@ -1,0 +1,11 @@
+
+Instalar json-server
+npm install -g json-server
+
+
+Correr servidor:
+json-server --watch db.json --port 3000
+
+
+Instalar SweetAlert2
+npm install sweetalert2

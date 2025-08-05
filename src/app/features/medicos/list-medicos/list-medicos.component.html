@@ -1,0 +1,27 @@
+<section>
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-800">Listado de Médicos</h2>
+    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded shadow" [routerLink]="['/medicos/crear']">
+      Nuevo Médico
+    </button>
+  </div>
+
+  <div class="grid gap-4">
+    @for (medico of medicos(); track medico.id) {
+    <div class="bg-white rounded-lg shadow p-4 border border-gray-200">
+        <h3 class="text-lg font-semibold text-indigo-700 mb-1">{{ medico.nombre }}</h3>
+        <p class="text-sm text-gray-600">
+            <strong>Especialidad:</strong> {{ medico.especialidad }}<br />
+            <strong>Teléfono:</strong> {{ medico.telefono }}<br />
+            <strong>Email:</strong> {{ medico.email }}
+        </p>
+        <div class="flex justify-end mt-4 space-x-2">
+            <button class="text-white bg-yellow-500 hover:bg-yellow-600 px-3 py-1 rounded" [routerLink]="['/medicos/editar', medico.id]">Editar</button>
+            <button class="text-white bg-red-500 hover:bg-red-600 px-3 py-1 rounded" (click)="medico.id && eliminarMedico(medico.id)">Eliminar</button>
+        </div>
+    </div>
+    }
+    <!-- Médico simulado -->
+    
+  </div>
+</section>

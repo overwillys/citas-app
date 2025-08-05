@@ -1,0 +1,58 @@
+{
+  "citas": [
+    {
+      "id": "1",
+      "fecha": "2025-08-01T10:00",
+      "motivo": "Control de presión",
+      "pacienteId": 1,
+      "medicoId": 1
+    },
+    {
+      "id": "299b",
+      "fecha": "2025-07-31T18:52",
+      "motivo": "asdsadsadsadsad",
+      "pacienteId": "1",
+      "medicoId": "1"
+    },
+    {
+      "id": "597a",
+      "fecha": "2025-08-01T17:53",
+      "motivo": "Dolor de Ojos",
+      "pacienteId": "0",
+      "medicoId": "0"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "dni": "12345678",
+      "telefono": "999888777",
+      "email": "juan@mail.com"
+    }
+  ],
+  "medicos": [
+    {
+      "id": "1",
+      "nombre": "Dra. Laura García",
+      "especialidad": "Cardiología",
+      "telefono": "987654321",
+      "email": "laura@clinica.com"
+    },
+    {
+      "id": "ad3f",
+      "nombre": "Dr Roxana",
+      "especialidad": "Dermatólogo",
+      "telefono": "23232323",
+      "email": "asdsadsad@hjotmail.com"
+    },
+    {
+      "id": "2646",
+      "nombre": "Dr Julieta",
+      "especialidad": "Pediatra",
+      "telefono": "as232323",
+      "email": "mkasdma@hotmail.com"
+    }
+  ]
+}

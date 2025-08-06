@@ -3,7 +3,7 @@
     {{ pacienteId ? 'Editar Paciente' : 'Nuevo Paciente' }}
   </h2>
 
-  <form [formGroup]="form" (ngSubmit)="guardar()" class="space-y-4">
+  <form [formGroup]="form" (submit)="guardar()" class="space-y-4">
 
     <!-- Nombre -->
     <div>

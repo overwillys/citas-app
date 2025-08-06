@@ -14,7 +14,14 @@ import { MedicoService } from '../../../services/medico.service';
   styleUrl: './list-citas.component.css'
 })
 export class ListCitasComponent implements OnInit {
-  citas  = signal<Cita[]>([]);
+
+  //usando propiedades normal de clase
+  //citas: Cita[] = [];
+  //medicos: Medico[] = [];
+  
+  
+  //Mejor un signals 
+  citas   = signal<Cita[]>([]);
   medicos = signal<Medico[]>([]);
 
   constructor(private citaService: CitaService, private medicoService: MedicoService) {}

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Medico } from '../models/medico.model';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -31,4 +31,20 @@ export class MedicoService {
   eliminarMedico(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
+  /*
+  // SOLO por Nombre -> GET /pacientes?dni=30118334
+  getByName(nombre: string): Observable<Medico[]> {
+    const params = new HttpParams().set('nombre', nombre.trim());
+    return this.http.get<Medico[]>(this.baseUrl, { params });
+  }
+  */
+
+  // Habra que buscar tal cual , ejemplo "Dr. Roxana"
+  getByName(nombre: string): Observable<Medico[]> {
+  const params = new HttpParams().set('nombre', nombre.trim());
+  return this.http.get<Medico[]>(this.baseUrl, { params });
+}
+
+
+
 }

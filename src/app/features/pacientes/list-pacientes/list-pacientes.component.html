@@ -4,8 +4,15 @@
     <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow" [routerLink]="['/pacientes/crear']" >
       Nuevo Paciente
     </button>
-  </div>
-  
+  </div>  
+
+ <form [formGroup]="formBusca" (submit)="buscar()" class="flex items-center gap-2 mb-4">
+  <input formControlName="dni" type="text" placeholder="Inserte el DNI" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded">Buscar</button>
+  <button type="button" (click)="limpiar()" class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-1 rounded">Limpiar</button>
+</form>
+
+      
     <div class="overflow-x-auto shadow rounded-lg border border-gray-200">
       <table  class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
@@ -35,9 +42,9 @@
 
             </tr>
           }
+
         </tbody>
       </table>
-
   </div>
 
 

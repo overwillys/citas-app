@@ -5,6 +5,8 @@ import { RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Medico } from '../../../models/medico.model';
 import { MedicoService } from '../../../services/medico.service';
+import { Paciente } from '../../../models/paciente.model';
+import { PacienteService } from '../../../services/paciente.service';
 
 
 @Component({
@@ -23,16 +25,22 @@ export class ListCitasComponent implements OnInit {
   //Mejor un signals 
   citas   = signal<Cita[]>([]);
   medicos = signal<Medico[]>([]);
+  pacientes = signal<Paciente[]>([]);
 
-  constructor(private citaService: CitaService, private medicoService: MedicoService) {}
+  constructor(private citaService: CitaService, private medicoService: MedicoService, private pacienteService: PacienteService) {}
 
   ngOnInit(): void {
     this.citaService.getCitas().subscribe((data) => {
       this.citas.set(data);
+      console.log('citas: ' + JSON.stringify(data));
     });
 
     this.medicoService.getMedicos().subscribe((data) =>{
       this.medicos.set(data);
+    })
+
+    this.pacienteService.getPacientes().subscribe((data)=>{
+      this.pacientes.set(data);
     })
   }
 
@@ -64,7 +72,15 @@ export class ListCitasComponent implements OnInit {
 getNombreMedico( medicoId: string ){
   // llamo al signal de medico, busca dentro del array de "m",  dentro cuyo "id" sea igual al paràmetro ( medicoId) 
   // Si find encuentra mostramos el nombre, sino , mostramos "--"
-  return this.medicos().find(m=> m.id === medicoId)?.nombre ?? ' No tiene medico asignado.-';
+  const medico = this.medicos().find(m => m.id === medicoId)
+  return medico ? `${medico.nombre}` : 'no tiene medico asignado.- '
+  //return this.medicos().find(m=> m.id === medicoId)?.nombre ?? ' No tiene medico asignado.-';
+}
+
+getNombrePaciente( pacienteId: string): string {
+  // Si no encuentra el paciente ( si es nulo ) ..
+  const paciente = this.pacientes().find(m => m.id === pacienteId)
+  return paciente ? `${paciente.apellido} ${paciente.nombre}` : 'No tiene paciente asignado.- '
 }
 
 }

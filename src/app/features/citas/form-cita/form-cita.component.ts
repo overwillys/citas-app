@@ -41,9 +41,20 @@ export class FormCitaComponent implements OnInit {
 
   ngOnInit(): void {
 
+  /* Valores iniciales y requierimientos del formulario */
   this.createFormCita(),
 
-  this.citaId = this.route.snapshot.paramMap.get('id') ?? undefined;
+    /*
+    // En la ruta (URL) existe el campo ID
+    const existeCita = this.route.snapshot.paramMap.get('id');
+    if (existeCita) {
+      // Obtenemos la informacion de la cita
+    } else {
+      // Es una nueva cita
+    }*/
+
+    this.citaId = this.route.snapshot.paramMap.get('id') ?? undefined;
+
     if (this.citaId) {
       this.citaService.getCita(this.citaId).subscribe((cita) => {
         this.form.patchValue(cita);
@@ -76,6 +87,7 @@ export class FormCitaComponent implements OnInit {
     }
   }
 
+  /* Metodo para asignar las validaciones que tiene que hacer el formulario */
   createFormCita(){
       this.form = this.fb.group({
       fecha: ['', Validators.required],

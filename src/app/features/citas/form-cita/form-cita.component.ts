@@ -40,12 +40,8 @@ export class FormCitaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.form = this.fb.group({
-      fecha: ['', Validators.required],
-      motivo: ['', [Validators.required, Validators.minLength(5)]],
-      pacienteId: [null, Validators.required],
-      medicoId: [null, Validators.required]
-    });
+
+  this.createFormCita(),
 
   this.citaId = this.route.snapshot.paramMap.get('id') ?? undefined;
     if (this.citaId) {
@@ -78,5 +74,14 @@ export class FormCitaComponent implements OnInit {
     } else {
       this.citaService.crearCita(cita).subscribe(callback);
     }
+  }
+
+  createFormCita(){
+      this.form = this.fb.group({
+      fecha: ['', Validators.required],
+      motivo: ['', [Validators.required, Validators.minLength(5)]],
+      pacienteId: [null, Validators.required],
+      medicoId: [null, Validators.required]
+    });
   }
 }

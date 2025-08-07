@@ -20,6 +20,13 @@
       "motivo": "UN NUEVO MOTIVO",
       "pacienteId": "851e",
       "medicoId": "51d9"
+    },
+    {
+      "id": "5b43",
+      "fecha": "2025-08-10T13:59",
+      "motivo": "dolor de cabeza",
+      "pacienteId": "92d2",
+      "medicoId": "ad3f"
     }
   ],
   "pacientes": [
@@ -46,6 +53,14 @@
       "dni": "454554545454",
       "telefono": "03854139560",
       "email": "21a2121sadsa@hotmail.com"
+    },
+    {
+      "id": "7c0f",
+      "nombre": "Williams",
+      "apellido": "Tuate",
+      "dni": "30118334",
+      "telefono": "03854139560",
+      "email": "sadsadsad@hotmail.com"
     }
   ],
   "medicos": [

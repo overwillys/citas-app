@@ -24,6 +24,10 @@
             <td class="px-6 py-4 text-sm text-gray-900"> {{ getNombreMedico(cita.medicoId) }}</td>
             <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.fecha }}</td>
             <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.motivo }}</td>
+            <td>
+              <button class="text-white bg-yellow-500 hover:bg-yellow-600 px-3 py-1 rounded ml-2" [routerLink]="['/citas/editar', cita.id]">Editar</button>
+              <button class="text-white bg-red-500 hover:bg-red-600 px-3 py-1 rounded ml-2" (click)="cita.id && eliminarCita(cita.id)">Eliminar</button>
+            </td>
           </tr>
         }
 

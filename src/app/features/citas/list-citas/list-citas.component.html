@@ -20,7 +20,10 @@
         </tr>
       </thead>
       <tbody>
-        @for ( cita of citas(); track cita.id){
+        <!-- uso de paginate  como piPe -->
+            <!-- //@for ( cita of citas(); track cita.id){}-->
+
+          @for (cita of (citas() | paginate: { itemsPerPage: 5, currentPage: pagina }); track cita.id) {
           
           <tr>
             <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.medicoId }}</td>
@@ -41,6 +44,14 @@
     </table>
 
   </div>
+  <br>
+
+
+<div class="mt-4 flex justify-center">
+  <pagination-controls (pageChange)="pagina = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+
+
 
 
   <!-- <div class="grid gap-4">

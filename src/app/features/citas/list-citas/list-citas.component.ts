@@ -7,11 +7,16 @@ import { Medico } from '../../../models/medico.model';
 import { MedicoService } from '../../../services/medico.service';
 import { Paciente } from '../../../models/paciente.model';
 import { PacienteService } from '../../../services/paciente.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 
 @Component({
   selector: 'app-list-citas',
-  imports: [RouterLink],
+  imports: [
+    RouterLink,
+    NgxPaginationModule    
+  ],
   templateUrl: './list-citas.component.html',
   styleUrl: './list-citas.component.css'
 })
@@ -82,6 +87,9 @@ getNombrePaciente( pacienteId: string): string {
   const paciente = this.pacientes().find(m => m.id === pacienteId)
   return paciente ? `${paciente.apellido} ${paciente.nombre}` : 'No tiene paciente asignado.- '
 }
+
+// Pagination
+   pagina: number = 1;
 
 }
 

@@ -1,0 +1,19 @@
+
+Instalar json-server
+npm install -g json-server
+
+
+Correr servidor:
+json-server --watch db.json --port 3000
+
+
+Instalar SweetAlert2
+npm install sweetalert2
+
+Para variables de entorno:
+ng g environments
+
+
+PARA PAGINACION:  ( DESDE https://michaelbromley.github.io/ngx-pagination/#/ )
+
+npm install ngx-pagination --save

@@ -7,6 +7,14 @@ Correr servidor:
 json-server --watch db.json --port 3000
 
 
+Instalar tailwind:
+npm install -D tailwindcss postcss autoprefixer
+
+Genera el archivo tailwind.config.js y postcss.config.js:
+npx tailwindcss init
+
+
+
 Instalar SweetAlert2
 npm install sweetalert2
 

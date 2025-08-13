@@ -10,12 +10,12 @@
     <table  class="min-w-full divide-y divide-gray-200">
       <thead class="bg-gray-50">
         <tr>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Id Médico</th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre Médico</th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Paciente</th>
-          <th scope="col" class="px-8 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha Cita</th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Motivo Cita</th>
-          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Id Médico</th>
+          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre Médico</th>
+          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Paciente</th>
+          <th scope="col" class="px-8 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha Cita</th>
+          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Motivo Cita</th>
+          <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
           <th scope="col" class="px-6 py-3"></th>
         </tr>
       </thead>
@@ -29,11 +29,9 @@
             <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.medicoId }}</td>
             <td class="px-6 py-4 text-sm text-gray-900"> {{ getNombreMedico(cita.medicoId) }}</td>
             <td class="px-6 py-4 text-sm text-gray-900"> {{ getNombrePaciente(cita.pacienteId) }}</td>
-
-            <td class="px-6 py-4 text-sm text-gray-900"> {{ (cita.medicoId) }}</td>
-            <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.fecha }}</td>
+            <td class="px-6 py-4 text-sm text-gray-900"> {{ formatearFecha(cita.fecha) }}</td>
             <td class="px-6 py-4 text-sm text-gray-900"> {{ cita.motivo }}</td>
-            <td>
+            <td class="text-center">
               <button class="text-white bg-yellow-500 hover:bg-yellow-600 px-3 py-1 rounded ml-2" [routerLink]="['/citas/editar', cita.id]">Editar</button>
               <button class="text-white bg-red-500 hover:bg-red-600 px-3 py-1 rounded ml-2" (click)="cita.id && eliminarCita(cita.id)">Eliminar</button>
             </td>

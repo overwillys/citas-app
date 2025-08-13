@@ -80,9 +80,4 @@ export class ListPacientesComponent implements OnInit {
     });
   }
 
-
-
-
-
-
 }

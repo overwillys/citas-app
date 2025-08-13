@@ -26,7 +26,7 @@
       "fecha": "2025-08-10T13:59",
       "motivo": "dolor de cabeza",
       "pacienteId": "92d2",
-      "medicoId": "ad3f"
+      "medicoId": null
     }
   ],
   "pacientes": [
@@ -64,13 +64,6 @@
     }
   ],
   "medicos": [
-    {
-      "id": "ad3f",
-      "nombre": "Dr Roxana",
-      "especialidad": "Dermatólogo",
-      "telefono": "23232323",
-      "email": "asdsadsad@hjotmail.com"
-    },
     {
       "id": "2646",
       "nombre": "Dr Julieta",

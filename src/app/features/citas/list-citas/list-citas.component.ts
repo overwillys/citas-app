@@ -88,6 +88,15 @@ getNombrePaciente( pacienteId: string): string {
   return paciente ? `${paciente.apellido} ${paciente.nombre}` : 'No tiene paciente asignado.- '
 }
 
+formatearFecha(fechaSinFormatear: string): string {
+
+  // Opcion 1: Formatear usando split
+  // const [fecha, hora] = fechaSinFormatear.split('T')
+  //return `${fecha} ${hora}`
+
+  return fechaSinFormatear.replace('T', ' ')
+}
+
 // Pagination
    pagina: number = 1;
 

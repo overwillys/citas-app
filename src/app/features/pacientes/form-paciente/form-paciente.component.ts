@@ -47,9 +47,7 @@ export class FormPacienteComponent implements OnInit {
   guardar(): void {
     if (this.form.invalid) return;
 
-
     const paciente: Paciente = this.pacienteId ? { id: this.pacienteId, ...this.form.value } : this.form.value;
-
     const callback = () => this.router.navigate(['/pacientes']);
 
     if (this.pacienteId) {

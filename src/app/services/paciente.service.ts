@@ -60,8 +60,8 @@ export class PacienteService {
 
   // SOLO por DNI -> GET /pacientes?dni=30118334
   getByDni(dni: string): Observable<Paciente[]> {
-    const params = new HttpParams().set('nombre', dni.trim());
-    return this.http.get<Paciente[]>(this.baseUrl, { params });
+    const params = new HttpParams().set('dni', dni.trim());
+    return this.http.get<Paciente[]>(this.baseUrl+'?=', { params });
   }
 
 

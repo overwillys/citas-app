@@ -27,6 +27,13 @@
       "motivo": "dolor de cabeza",
       "pacienteId": "92d2",
       "medicoId": null
+    },
+    {
+      "id": "785c",
+      "fecha": "2025-08-13T20:28",
+      "motivo": "aaaaaaa",
+      "pacienteId": "851e",
+      "medicoId": "2646"
     }
   ],
   "pacientes": [
@@ -77,6 +84,13 @@
       "especialidad": "Dermatólogo",
       "telefono": "35258822500",
       "email": "dosmail@gmail.com"
+    },
+    {
+      "id": "08a6",
+      "nombre": "Porsfdokamsdm",
+      "especialidad": "Pediatra",
+      "telefono": "385441122320000",
+      "email": "asdsadsasad@botlane.com"
     }
   ]
 }

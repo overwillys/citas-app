@@ -1,4 +1,7 @@
 
+Instalar tailwindcss
+https://tailwindcss.com/docs/installation/framework-guides/angular
+
 Instalar json-server
 npm install -g json-server
 
@@ -12,7 +15,6 @@ npm install -D tailwindcss postcss autoprefixer
 
 Genera el archivo tailwind.config.js y postcss.config.js:
 npx tailwindcss init
-
 
 
 Instalar SweetAlert2

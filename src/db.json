@@ -25,7 +25,7 @@
       "id": "5b43",
       "fecha": "2025-08-10T13:59",
       "motivo": "dolor de cabeza",
-      "pacienteId": "92d2",
+      "pacienteId": null,
       "medicoId": null
     },
     {
@@ -39,25 +39,17 @@
   "pacientes": [
     {
       "id": "851e",
-      "nombre": "Williams",
-      "apellido": "Tuate",
-      "dni": "30118334",
+      "nombre": "Roberto Gomez",
+      "apellido": "Bolañoz",
+      "dni": "203030032",
       "telefono": "03854139560",
       "email": "micorreo@gmail.com"
     },
     {
-      "id": "92d2",
-      "nombre": "Tumama",
-      "apellido": "me mima",
-      "dni": "23232332323",
-      "telefono": "95656565",
-      "email": "sadsadsad@hotmail.com"
-    },
-    {
       "id": "c63f",
-      "nombre": "Williams",
-      "apellido": "Tuate",
-      "dni": "454554545454",
+      "nombre": "Samuel",
+      "apellido": "Eto'",
+      "dni": "2730402330",
       "telefono": "03854139560",
       "email": "21a2121sadsa@hotmail.com"
     },
@@ -68,6 +60,22 @@
       "dni": "30118334",
       "telefono": "03854139560",
       "email": "sadsadsad@hotmail.com"
+    },
+    {
+      "id": "6a86",
+      "nombre": "Gaston",
+      "apellido": "Abregu",
+      "dni": "230293920",
+      "telefono": "3843922333",
+      "email": "portuzuelonet@hotmail.com"
+    },
+    {
+      "id": "1f93",
+      "nombre": "Gerardo",
+      "apellido": "Zamora",
+      "dni": "239022230",
+      "telefono": "039299222",
+      "email": "descargasdegoogle@gmail.com"
     }
   ],
   "medicos": [
@@ -87,10 +95,17 @@
     },
     {
       "id": "08a6",
-      "nombre": "Porsfdokamsdm",
+      "nombre": "Dr. Stoickovich",
       "especialidad": "Pediatra",
       "telefono": "385441122320000",
       "email": "asdsadsasad@botlane.com"
+    },
+    {
+      "id": "927c",
+      "nombre": "Dr. Gomez",
+      "especialidad": "Ginecólogo",
+      "telefono": "239200233",
+      "email": "drgomez23@gmail.com"
     }
   ]
 }

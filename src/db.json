@@ -34,6 +34,13 @@
       "motivo": "aaaaaaa",
       "pacienteId": "851e",
       "medicoId": "2646"
+    },
+    {
+      "id": "e0d4",
+      "fecha": "2025-11-21T21:08",
+      "motivo": "Dolor de panza",
+      "pacienteId": "7c0f",
+      "medicoId": "2646"
     }
   ],
   "pacientes": [

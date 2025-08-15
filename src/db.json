@@ -41,13 +41,20 @@
       "motivo": "Dolor de panza",
       "pacienteId": "7c0f",
       "medicoId": "2646"
+    },
+    {
+      "id": "da1a",
+      "fecha": "2025-08-15T11:21",
+      "motivo": "Dolor de Rodilla",
+      "pacienteId": "df3b",
+      "medicoId": null
     }
   ],
   "pacientes": [
     {
       "id": "851e",
-      "nombre": "Roberto Gomez",
-      "apellido": "Bolañoz",
+      "nombre": "Roberto Gomez2",
+      "apellido": "Bolañoz2",
       "dni": "203030032",
       "telefono": "03854139560",
       "email": "micorreo@gmail.com"
@@ -83,13 +90,21 @@
       "dni": "239022230",
       "telefono": "039299222",
       "email": "descargasdegoogle@gmail.com"
+    },
+    {
+      "id": "df3b",
+      "nombre": "Sulma",
+      "apellido": "Tabarez",
+      "dni": "20203232",
+      "telefono": "99282822323",
+      "email": "kasnmdsa@gmail.com"
     }
   ],
   "medicos": [
     {
       "id": "2646",
-      "nombre": "Dr Julieta",
-      "especialidad": "Pediatra",
+      "nombre": "Dr Julieta2",
+      "especialidad": "Clínico",
       "telefono": "as232323",
       "email": "mkasdma@hotmail.com"
     },

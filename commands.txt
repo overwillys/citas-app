@@ -1,6 +1,7 @@
 
 Instalar tailwindcss
 https://tailwindcss.com/docs/installation/framework-guides/angular
+npm install -D tailwindcss postcss autoprefixer
 
 Instalar json-server
 npm install -g json-server
@@ -9,9 +10,6 @@ npm install -g json-server
 Correr servidor:
 json-server --watch db.json --port 3000
 
-
-Instalar tailwind:
-npm install -D tailwindcss postcss autoprefixer
 
 Genera el archivo tailwind.config.js y postcss.config.js:
 npx tailwindcss init
